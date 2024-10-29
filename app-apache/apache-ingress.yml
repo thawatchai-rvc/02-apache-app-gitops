@@ -5,13 +5,14 @@ metadata:
   annotations:
     nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
+  ingressClassName: apache
   rules:
-      http:
-        paths:
-          - path: /apache-app
-            pathType: Prefix
-            backend:
-              service:
-                name: apache-service  # ชื่อของ Service ที่ต้องการเชื่อมต่อ
-                port:
-                  number: 80  # พอร์ตของ Service
+  - http:
+      paths:
+      - path: /testpath
+        pathType: Prefix
+        backend:
+          service:
+            name: apache-service
+            port:
+              number: 80
