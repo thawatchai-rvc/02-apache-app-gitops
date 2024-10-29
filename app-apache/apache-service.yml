@@ -3,10 +3,11 @@ kind: Service
 metadata:
   name: apache-service
 spec:
+  type: NodePort
   selector:
     app: apache
   ports:
     - protocol: TCP
       port: 80  # พอร์ตที่ Service เปิดใช้งาน
       targetPort: 80  # พอร์ตที่รับจาก Container
-  type: NodePort  # สามารถเปลี่ยนเป็น NodePort หรือ ClusterIP ตามความต้องการ
+      nodePort: 30181
