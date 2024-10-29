@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: apache-service
+spec:
+  selector:
+    app: apache
+  ports:
+    - protocol: TCP
+      port: 80  # พอร์ตที่ Service เปิดใช้งาน
+      targetPort: 80  # พอร์ตที่รับจาก Container
+  type: LoadBalancer  # สามารถเปลี่ยนเป็น NodePort หรือ ClusterIP ตามความต้องการ
