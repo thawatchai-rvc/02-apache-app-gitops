@@ -6,7 +6,6 @@ metadata:
     nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
   rules:
-    - host: apache.example.com  # ระบุชื่อโดเมนที่ต้องการใช้สำหรับ Ingress
       http:
         paths:
           - path: /apache-app
