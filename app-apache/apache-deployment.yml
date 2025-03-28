@@ -5,7 +5,7 @@ metadata:
   labels:
     app: apache
 spec:
-  replicas: 2  # จำนวน replicas ของ Apache (สามารถปรับเปลี่ยนได้ตามต้องการ)
+  replicas: 3  # จำนวน replicas ของ Apache (สามารถปรับเปลี่ยนได้ตามต้องการ)
   selector:
     matchLabels:
       app: apache
